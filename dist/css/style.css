@@ -1,0 +1,77 @@
+@-webkit-keyframes progress-indicator-animation {
+  from {
+    left: 0;
+  }
+  to {
+    left: 94%;
+  }
+}
+
+@keyframes progress-indicator-animation {
+  from {
+    left: 0;
+  }
+  to {
+    left: 94%;
+  }
+}
+
+.card {
+  width: 264px;
+  height: 476px;
+  border-radius: 30px;
+}
+
+.appBar {
+  padding: 16px 21px;
+}
+
+.photo-cover {
+  padding: 0 14px;
+}
+
+.progress-detail {
+  width: 225px;
+  height: 30px;
+  margin-top: 40px;
+  margin-bottom: 7px;
+}
+
+.bar {
+  height: 13px;
+  width: 225px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+#p-ind {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes progressIndicatorAnimation {
+  from {
+    left: 0;
+  }
+  to {
+    left: 94%;
+  }
+}
+
+@keyframes progressIndicatorAnimation {
+  from {
+    left: 0;
+  }
+  to {
+    left: 94%;
+  }
+}
+
+.controls {
+  height: 56px;
+  width: 225px;
+}
+/*# sourceMappingURL=style.css.map */

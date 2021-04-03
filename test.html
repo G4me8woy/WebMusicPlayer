@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+.bg-box {
+  width: 500px;
+  height: 100px;
+  background-color: red;
+  animation-name: road;
+  animation-duration: 4s;
+  position: relative;
+  z-index: 0;
+}
+
+.sm-box{
+	height: 20px;
+    width: 20px;
+    background-color: blue;
+    animation-name: move;
+    animation-duration: 4s;
+    position: absolute;
+    z-index: 1;
+}
+
+@keyframes move {
+  /* from {
+  	background-color: yellow;
+
+    }
+  to {
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    } */
+  /* from {
+  	top: 0;
+    left: 0;
+    }
+  to {
+    top: 100%;
+    left: 100%;
+    } */
+    0%{
+      left: 0;
+      top: 0;
+      background-color: blue;
+    }
+    25%{
+      left: 90%;
+      top: 0%;
+      background-color: red;
+    }
+    50%{
+      left: 90%;
+      top: 90%;
+      background-color: yellow;
+    }
+    75%{
+      left: 0;
+      top: 90%;
+      background-color: green;
+    }
+    100%{
+      left: 0;
+      top: 0;
+      background-color: blue;
+    }
+}
+
+@keyframes road {
+
+  /* from {background-color: red;}
+  to {background-color: yellow;} */
+
+  0%{
+    background-color: red;
+  }
+  25%{
+    background-color: yellow;
+  }
+  75%{
+    background-color: green;
+  }
+}
+
+.bar{
+  height: 13px;
+  width: 225px;
+  /* border: 1px solid black; */
+  display: flex;
+  position: relative;
+}
+#p-ind{
+  position: absolute;
+  top: 0;
+  /* left: 94%;  */
+  animation-name: timer;
+  animation-duration: 60s;
+}
+
+@keyframes timer {
+  from{
+    left: 0;
+  }
+  to{
+    left: 94%;
+  }
+}
+
+.box{
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  /* left: 94%;  */
+  /* animation-name: timer;
+  animation-duration: 0; */
+}
+
+
+</style>
+</head>
+<body>
+
+  <div class="box"></div>
+  <br>
+  <br>
+  <br><br><br><br>
+  <input type="text" id="textBox">
+
+  <button id="colorBtn" onclick="changeColor('pink')">change color</button>
+  <button id="move" onclick="move()">move</button>
+  <button id="pause" onclick="pause()">pause</button>
+  <button id="pause" onclick="play()">play</button>
+
+  <script>
+    const textBox = document.getElementById('textBox');
+    const colorBtn = document.getElementById('colorBtn');
+    const moveBtn = document.getElementById('move');
+    const box = document.querySelector('.box');
+
+    function changeColor() {
+      box.style.background = textBox.value;
+    }
+
+    function move() {
+      // box.style['animation-duration'] = '10s';
+      box.style.animation = '0.01s timer';
+      // var clone = box.cloneNode(true);
+      // box.parentNode.replaceChild(clone, box);
+    }
+
+    function pause() {
+      box.style.webkitAnimationPlayState="paused";
+    }
+
+    function play() {
+      box.style.webkitAnimationPlayState="running";
+    }
+
+  </script>
+</body>
+</html>
